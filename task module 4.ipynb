@@ -1,0 +1,271 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "e69964d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter first number: 7\n",
+      "Enter second number: 9\n",
+      "The GCD of 7 and 9 is: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a program to find greatest common divisor (GCD) or highest common factor (HCF) of given two numbers.\n",
+    "def gcd(a, b):\n",
+    "    if b == 0:\n",
+    "        return a\n",
+    "    else:\n",
+    "        return gcd(b, a % b)\n",
+    "num1 = int(input(\"Enter first number: \"))\n",
+    "num2 = int(input(\"Enter second number: \"))\n",
+    "result = gcd(num1, num2)\n",
+    "print(\"The GCD of\", num1, \"and\", num2, \"is:\", result)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "dc1c4b42",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Armstrong numbers between 100 and 500 are:\n",
+      "153\n",
+      "370\n",
+      "371\n",
+      "407\n"
+     ]
+    }
+   ],
+   "source": [
+    "# A three digit number is called Armstrong number if sum of cube of its digit is equal to number itself.\n",
+    "#Write all Armstrong numbers between 100 to 500.\n",
+    "def isArmstrong(num):\n",
+    "    sum = 0\n",
+    "    temp = num\n",
+    "    while temp > 0:\n",
+    "        digit = temp % 10\n",
+    "        sum += digit ** 3\n",
+    "        temp //= 10\n",
+    "    if num == sum:\n",
+    "        return True\n",
+    "    else:\n",
+    "        return False\n",
+    "print(\"Armstrong numbers between 100 and 500 are:\")\n",
+    "for i in range(100, 501):\n",
+    "    if isArmstrong(i):\n",
+    "        print(i)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "45489f07",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "Fizz\n",
+      "4\n",
+      "Buzz\n",
+      "Fizz\n",
+      "7\n",
+      "8\n",
+      "Fizz\n",
+      "Buzz\n",
+      "11\n",
+      "Fizz\n",
+      "13\n",
+      "14\n",
+      "FizzBuzz\n",
+      "16\n",
+      "17\n",
+      "Fizz\n",
+      "19\n",
+      "Buzz\n",
+      "Fizz\n",
+      "22\n",
+      "23\n",
+      "Fizz\n",
+      "Buzz\n",
+      "26\n",
+      "Fizz\n",
+      "28\n",
+      "29\n",
+      "FizzBuzz\n",
+      "31\n",
+      "32\n",
+      "Fizz\n",
+      "34\n",
+      "Buzz\n",
+      "Fizz\n",
+      "37\n",
+      "38\n",
+      "Fizz\n",
+      "Buzz\n",
+      "41\n",
+      "Fizz\n",
+      "43\n",
+      "44\n",
+      "FizzBuzz\n",
+      "46\n",
+      "47\n",
+      "Fizz\n",
+      "49\n",
+      "Buzz\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Write a Python program that iterates the integers from 1 to 50. For multiples of three print \"Fizz\" instead of the number and for multiples of five print \"Buzz\". For numbers that are multiples of three and five, print \"FizzBuzz\".\n",
+    "for num in range(1, 51):\n",
+    "    if num % 3 == 0 and num % 5 == 0:\n",
+    "        print(\"FizzBuzz\")\n",
+    "    elif num % 3 == 0:\n",
+    "        print(\"Fizz\")\n",
+    "    elif num % 5 == 0:\n",
+    "        print(\"Buzz\")\n",
+    "    else:\n",
+    "        print(num)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "8ab3e8aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a number: 5698\n",
+      "Total number of digits in 5698 is: 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Write a program to count the total number of digits in a number using a while loop\n",
+    "num = int(input(\"Enter a number: \"))\n",
+    "count = 0\n",
+    "temp = num\n",
+    "while temp > 0:\n",
+    "    count += 1\n",
+    "    temp //= 10\n",
+    "print(\"Total number of digits in\", num, \"is:\", count)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "688ab709",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a program to print number from 50 to 1.\n",
+    "for num in range(50, 0, -1):\n",
+    "    print(num,end=\",\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "4a8ec2ab",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Guess a number between 1 and 9: 5\n",
+      "Your guess is too high. Guess a lower number.\n",
+      "Guess a number between 1 and 9: 3\n",
+      "Congratulations! You guessed the correct number.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a Python program to guess a number between 1 and 9\n",
+    "import random\n",
+    "\n",
+    "# Generating a random number between 1 and 9\n",
+    "num = random.randint(1, 9)\n",
+    "\n",
+    "# Setting initial number of attempts to 0\n",
+    "attempts = 0\n",
+    "\n",
+    "# Looping until the user guesses the correct number or runs out of attempts\n",
+    "while attempts < 3:\n",
+    "    # Taking input from the user\n",
+    "    guess = int(input(\"Guess a number between 1 and 9: \"))\n",
+    "\n",
+    "    # Checking if the guess is correct\n",
+    "    if guess == num:\n",
+    "        print(\"Congratulations! You guessed the correct number.\")\n",
+    "        break\n",
+    "    elif guess < num:\n",
+    "        print(\"Your guess is too low. Guess a higher number.\")\n",
+    "    else:\n",
+    "        print(\"Your guess is too high. Guess a lower number.\")\n",
+    "\n",
+    "    # Increasing the number of attempts\n",
+    "    attempts += 1\n",
+    "\n",
+    "# If the user runs out of attempts, print the correct number\n",
+    "if attempts == 3:\n",
+    "    print(\"Sorry, you ran out of attempts. The correct number was\", num)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3ec2c659",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
