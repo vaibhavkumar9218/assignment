@@ -1,0 +1,197 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "40d0000e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The smallest number is: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a Python program to get the smallest number from a list.\n",
+    "numbers = [4, 6, 2, 8, 5, 1]\n",
+    "smallest = numbers[0]\n",
+    "for number in numbers:\n",
+    "    if number < smallest:\n",
+    "        smallest = number\n",
+    "print(\"The smallest number is:\", smallest)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "54894dde",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The list is empty\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a Python program to check if a list is empty or not.\n",
+    "my_list = []\n",
+    "if len(my_list) == 0:\n",
+    "    print(\"The list is empty\")\n",
+    "else:\n",
+    "    print(\"The list is not empty\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "56fc20c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The lists have at least one common member.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a Python function that takes two lists and returns True if they have at least one common member.\n",
+    "def have_common_member(list1, list2):\n",
+    "    for item in list1:\n",
+    "        if item in list2:\n",
+    "            return True\n",
+    "    return False\n",
+    "list1 = [1, 2, 3, 4]\n",
+    "list2 = [4, 5, 6, 7]\n",
+    "if have_common_member(list1, list2):\n",
+    "    print(\"The lists have at least one common member.\")\n",
+    "else:\n",
+    "    print(\"The lists do not have any common members.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "8a66b4b6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List 1: [1, 2, 3]\n",
+      "List 2: [4, 5, 6, [1, 2, 3]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Write a Python program to append a list to the second list.\n",
+    "list1 = [1, 2, 3]\n",
+    "list2 = [4, 5, 6]\n",
+    "list2.append(list1)\n",
+    "print(\"List 1:\", list1)\n",
+    "print(\"List 2:\", list2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "25862520",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+      "Modified list: [1, 2, 3, 6, 7, 8, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.\n",
+    "my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+    "result_list=[]\n",
+    "for i in range (len(my_list)):\n",
+    "    if i==0 or i==4 or i==5:\n",
+    "        pass\n",
+    "    else:\n",
+    "        result_list.append(my_list[i])\n",
+    "print(\"Original list:\", my_list)\n",
+    "print(\"Modified list:\", result_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "a0069af8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter an integer: 1\n",
+      "Enter an integer: 2\n",
+      "Enter an integer: 3\n",
+      "Enter an integer: 4\n",
+      "Enter an integer: 5\n",
+      "Enter an integer: 6\n",
+      "Enter an integer: 7\n",
+      "Enter an integer: 8\n",
+      "Enter an integer: 9\n",
+      "Enter an integer: 10\n",
+      "Input List: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+      "Reverse List: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Take 10 integer inputs from user and store them in a list. Now, copy all the elements in another list but in reverse order.\n",
+    "input_list = []\n",
+    "for i in range(10):\n",
+    "    num = int(input(\"Enter an integer: \"))\n",
+    "    input_list.append(num)\n",
+    "reverse_list = input_list[::-1]\n",
+    "print(\"Input List:\", input_list)\n",
+    "print(\"Reverse List:\", reverse_list)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08cffc42",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
